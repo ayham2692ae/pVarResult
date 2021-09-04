@@ -1,0 +1,16 @@
+;=====================================
+_('     .elseif dword[dispIdMember] = ' & _DefineDispID(-5,'__keys')); ..
+_('         getmempos ebx')
+...code...
+_('         stdcall [ebx+_CreateArray],0'); release object
+;=====================================
+_('     .elseif dword[dispIdMember] = ' & _DefineDispID(-6,'__fill'));
+_('         mov esi, [pDispParams]')
+...code...
+_('         xor eax,eax'); set return S_OK
+;=====================================
+_('     .elseif dword[dispIdMember] = ' & _DefineDispID(-7,'__reverse')) ;
+_('         mov esi, [pDispParams]')
+...code...
+_('         xor eax,eax'); set return S_OK
+;=====================================
